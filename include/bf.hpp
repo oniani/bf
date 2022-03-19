@@ -1,6 +1,9 @@
-/// A zero-dependency bloom filter. The current implementation can load over 400000 words in under
-/// 0.15 seconds. Searches for words are instantaneous. That being said, due to the fundamental
-/// property of bloom filters, there is a chance for false positive results.
+/// A zero-dependency bloom filter implementation. The data structure provides efficient data
+/// storage and lookup. It is important to note that due to the probabilistic nature of the data
+/// structure, there is a chance for false positive results. In other words, after inserting data
+/// into the bloom filter, a lookup can either tell that the data is present with some probability
+/// of the false positive outcome or tell that the data is definitely not present in the data
+/// structure.
 
 #ifndef BF_H
 #define BF_H

@@ -8,7 +8,7 @@ project(bf LANGUAGES CXX VERSION 1.0)
 
 option(BUILD "Build the binary" OFF)
 if(BUILD)
-  add_executable(${PROJECT_NAME} main.cxx)
+  add_executable(${PROJECT_NAME} main.cpp)
 endif()
 
 option(TESTING "Build tests binary using catch2" ON)
@@ -16,7 +16,7 @@ if(TESTING)
   add_subdirectory(test)
 endif()
 
-file(GLOB_RECURSE FILES *.cxx *.hxx)
+file(GLOB_RECURSE FILES *.cpp *.hpp)
 
 find_program(CLANG_FORMAT clang-format)
 if(CLANG_FORMAT)

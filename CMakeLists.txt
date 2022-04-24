@@ -6,10 +6,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(
-  lib
+  bf
   VERSION 0.0.1
-  DESCRIPTION "Description"
-  HOMEPAGE_URL "https://github.com/oniani"
+  DESCRIPTION "A zero-dependency, header-only, and minimal C++ bloom filter."
+  HOMEPAGE_URL "https://github.com/oniani/bf"
   LANGUAGES C CXX
 )
 

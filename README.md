@@ -1,17 +1,34 @@
-# bf
+# project
 
 A zero-dependency, header-only, and minimal C++ bloom filter.
 
-## Testing
+## API
+
+```cpp
+#include "include/bf.hpp"
+
+int main() {
+  auto bf = bf::BloomFilter{6, 1e-2};
+  bf.insert("hi");
+}
+```
+
+## Build
 
 ```console
-mkdir build && cd build && cmake -D CMAKE_CXX_COMPILER=clang++ .. && make -j4 && ./test/tests
+$ mkdir build
+$ cd build
+$ cmake -DCOMPILER=clang -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=VCPKG_TOOLCHAIN_FILE ..
+$ cmake --build .
 ```
 
 ## References
 
-- [Bloom filter](https://en.wikipedia.org/wiki/Bloom_filter)
+- [Bloom filter][bloomfilter]
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License][license]
+
+[bloomfilter]: https://en.wikipedia.org/wiki/Bloom_filter
+[license]: LICENSE

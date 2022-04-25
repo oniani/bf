@@ -80,7 +80,7 @@ namespace bf {
       }
 
       bits = -std::ceil(elems * std::log(eps) / std::pow(std::log(2), 2));
-      hash_fns = std::ceil(bits / elems * std::log(2));
+      hash_fns = std::ceil(static_cast<float>(bits) / static_cast<float>(elems) * std::log(2));
       bvec = std::vector(bits, false);
     }
 

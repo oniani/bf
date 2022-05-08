@@ -138,7 +138,9 @@ namespace bf {
     /**
      * @brief Clears the bloom filter.
      */
-    auto clear() noexcept { bvec = std::vector(bits, false); }
+    auto clear() noexcept {
+      bvec = std::vector(bits, false);
+    }
   };
 
 }  // namespace bf
